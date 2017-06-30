@@ -161,7 +161,7 @@ def ScanForAlerts():
 				
 							if not screen_name in ignore_list:
 	
-								if item['retweet_count'] > 0:
+								if item['retweet_count'] >= 0:
 
 									post_list.append(item)
 									f_ign = open('ignorelist', 'a')

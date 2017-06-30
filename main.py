@@ -104,9 +104,6 @@ def UpdateQueue():
 			post = post_list[0]
 			LogAndPrint("Retweeting: " + str(post['id']) + " " + str(post['text'].encode('utf8')))
 
-			CheckForFollowRequest(post)
-			CheckForFavoriteRequest(post)
-
 			r = api.request('statuses/retweet/:' + str(post['id']))
 			CheckError(r)
 			post_list.pop(0)

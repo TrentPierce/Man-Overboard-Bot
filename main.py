@@ -197,7 +197,7 @@ def ScanForAlerts():
 
 			except Exception as e:
 				print("Could not connect to TwitterAPI - are your credentials correct?")
-				print("Exception: " + e)
+				print(e)
 
 	else:
 

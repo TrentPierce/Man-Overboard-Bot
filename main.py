@@ -118,42 +118,9 @@ def UpdateQueue():
 			print("Ratelimit at " + str(ratelimit[2]) + "% -> pausing retweets")
 
 
-# Check if a post requires you to follow the user.
-# Be careful with this function! Twitter may write ban your application for following too aggressively
-def CheckForFollowRequest(item):
-	text = item['text']
-	if any(x in text.lower() for x in follow_keywords):
-		try:
-			r = api.request('friendships/create', {'screen_name': item['retweeted_status']['user']['screen_name']})
-			CheckError(r)
-			LogAndPrint("Follow: " + item['retweeted_status']['user']['screen_name'])
-		except:
-			user = item['user']
-			screen_name = user['screen_name']
-			r = api.request('friendships/create', {'screen_name': screen_name})
-			CheckError(r)
-			LogAndPrint("Follow: " + screen_name)
-
-
-# Check if a post requires you to favorite the tweet.
-# Be careful with this function! Twitter may write ban your application for favoriting too aggressively
-def CheckForFavoriteRequest(item):
-	text = item['text']
-
-	if any(x in text.lower() for x in fav_keywords):
-		try:
-			r = api.request('favorites/create', {'id': item['retweeted_status']['id']})
-			CheckError(r)
-			LogAndPrint("Favorite: " + str(item['retweeted_status']['id']))
-		except:
-			r = api.request('favorites/create', {'id': item['id']})
-			CheckError(r)
-			LogAndPrint("Favorite: " + str(item['id']))
-
-
-# Scan for new contests, but not too often because of the rate limit.
-def ScanForContests():
-	t = threading.Timer(scan_update_time, ScanForContests)
+# Scan for new alerts, but not too often because of the rate limit.
+def ScanForAlerts():
+	t = threading.Timer(scan_update_time, ScanForAlerts
 	t.daemon = True;
 	t.start()
 	
@@ -161,7 +128,7 @@ def ScanForContests():
 	
 	if not ratelimit_search[2] < min_ratelimit_search:
 	
-		print("=== SCANNING FOR NEW CONTESTS ===")
+		print("=== SCANNING FOR NEW ALERTS ===")
 
 
 		for search_query in search_queries:
@@ -240,7 +207,7 @@ def ScanForContests():
 
 
 CheckRateLimit()
-ScanForContests()
+ScanForAlerts()
 UpdateQueue()
 
 while (True):

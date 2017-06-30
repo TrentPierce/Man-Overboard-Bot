@@ -1,15 +1,14 @@
 {
         "search-queries": ["man overboard", "Overboard", "overboard"], 
-	"follow-keywords": [" follow ", " follower "],
-        "fav-keywords": [" fav ", " favorite "],
+	
         "scan-update-time": 1800,
         "retweet-update-time": 20,
         "rate-limit-update-time": 10,
         "min-ratelimit":10,
         "min-ratelimit-retweet":20,
         "min-ratelimit-search":40,
-	"consumer-key": "YOUR CONSUMER KEY",
-	"consumer-secret": "YOUR SECRET KEY",
-	"access-token-key": "YOUR ACCESS TOKEN KEY",
-	"access-token-secret": "YOUR ACCESS TOKEN SECRET"
+	"consumer-key": "36kaN2FXpZ3v1PbtU9PDuYIZM",
+	"consumer-secret": "ZTDq6r7joc1zPkF14p1fv6BKPBWM5wF2yy7CcrzqghIK4ialU9",
+	"access-token-key": "763707085695684608-ijzvDNFbF8Q0ZFoLaw7YUVHrvH788nH",
+	"access-token-secret": "OBTXabg00XAqwru9xEHMqVMstkEJF7ofQI2QyLB0SevI8"
 }

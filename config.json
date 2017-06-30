@@ -1,7 +1,6 @@
 {
         "search-queries": ["man overboard", "Overboard", "overboard"], 
-	
-"follow-keywords": [" follow ", " follower "],
+	"follow-keywords": [" follow ", " follower "],
         "fav-keywords": [" fav ", " favorite "],
         "scan-update-time": 1800,
         "retweet-update-time": 20,

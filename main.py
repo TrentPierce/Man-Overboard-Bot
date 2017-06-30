@@ -21,8 +21,6 @@ min_ratelimit = data["min-ratelimit"]
 min_ratelimit_retweet = data["min-ratelimit-retweet"]
 min_ratelimit_search = data["min-ratelimit-search"]
 search_queries = data["search-queries"]
-follow_keywords = data["follow-keywords"]
-fav_keywords = data["fav-keywords"]
 
 # Don't edit these unless you know what you're doing.
 api = TwitterAPI(consumer_key, consumer_secret, access_token_key, access_token_secret)

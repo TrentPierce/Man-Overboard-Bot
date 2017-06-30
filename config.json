@@ -1,6 +1,5 @@
 {
         "search-queries": ["man overboard", "Overboard", "overboard"], 
-	
         "scan-update-time": 1800,
         "retweet-update-time": 20,
         "rate-limit-update-time": 10,

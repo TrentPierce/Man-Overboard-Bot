@@ -120,7 +120,7 @@ def UpdateQueue():
 
 # Scan for new alerts, but not too often because of the rate limit.
 def ScanForAlerts():
-	t = threading.Timer(scan_update_time, ScanForAlerts
+	t = threading.Timer(scan_update_time, ScanForAlerts)
 	t.daemon = True;
 	t.start()
 	

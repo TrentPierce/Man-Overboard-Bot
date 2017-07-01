@@ -1,8 +1,6 @@
 # Man-Overboard-Bot
 Will poll Twitter for the keywords defined in config.json. When the keyword matches, the bot retweets the relevant tweet. View it in action at http://www.Twitter.com/ManOverboardBot
 
-[![Build Status](https://github.com/TrentPierce/Man-Overboard-Bot)
-
 Donate
 ------------
 
